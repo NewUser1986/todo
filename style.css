@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #b5b5b5;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  color: #fafafa;
+}
+
+button {
+  cursor: pointer;
+}
+
+.wrap {
+  width: 50%;
+  height: 95vh;
+  background: #2b292e;
+  margin: 2rem auto;
+  border: 3px solid white;
+  overflow: scroll;
+}
+
+.container {
+  width: 60rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header {
+  background: royalblue;
+  color: white;
+  padding: 1.6rem 0;
+}
+
+.header__title {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+}
+
+.header__subtitle {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.filter {
+  background-color: #353239;
+  padding: 1rem;
+}
+
+.filter__container {
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.filter__container--spaced {
+  justify-content: space-between;
+}
+
+.input {
+  width: 70%;
+  border: none;
+  font-size: 1.4rem;
+  height: 3rem;
+  margin-right: 1.6rem;
+  padding: 1rem;
+}
+
+.input:focus {
+  border: 1px solid royalblue;
+}
+
+.checkbox {
+  display: flex;
+  align-items: baseline;
+}
+
+.checkbox > input {
+  margin-right: 0.5rem;
+}
+
+.button {
+  background: royalblue;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1.6rem;
+  padding: 0.6rem;
+  transition: background 0.3s ease, color 0.5s ease;
+}
+
+.button:hover {
+  background: rgb(5, 66, 252);
+}
+
+.button--text {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #f4f4f4;
+}
+
+.button--text:hover {
+  background: none;
+  color: white;
+  text-decoration: underline;
+  background-color: red;
+}
+
+.list-item {
+  text-decoration: none;
+  color: #fafafa;
+  background: royalblue;
+  border: 1px solid #f4f4f4;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  cursor: pointer;
+  display: block;
+  transition: background 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item__container {
+  display: flex;
+  font-size: 1.8rem;
+  align-items: baseline;
+}
+
+.list-item__container > *:first-child {
+  margin-right: 0.5rem;
+}
+
+.list-item:hover {
+  background: rgb(5, 66, 252);
+}
+
+.list-title {
+  margin: 2rem;
+}
+
+/* MEDIA RESPONSIVE */
+/*font-size: 62,5%; 1 rem = 10px tab landscape 
+  font-size: 56, 25%; 1 rem = 9px tab portrait 
+  font-size:50 %; 1 rem = 8px  tab landscape 
+  font-size: 75%; 1 rem = 12px big desktop 
+
+  /*BIG DESKTOP*/
+
+@media only screen and (min-width: 1600px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  html {
+    font-size: 62.5%;
+  }
+  .wrap {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    html {
+      font-size: 50%;
+    }
+    body {
+      font-size: 1.4rem;
+    }
+    .wrap {
+      width: 80%;
+    }
+
+    .container-header {
+      width: 50%;
+    }
+
+    .container {
+      width: 90%;
+    }
+
+    .header__title {
+      font-size: 3rem;
+    }
+
+    .header__subtitle {
+      font-size: 2rem;
+    }
+
+    .list-title {
+      font-size: 2rem;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .wrap {
+      width: 50rem;
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    html {
+      font-size: 40%;
+    }
+    .wrap {
+      width: 40rem;
+      height: fit-content;
+    }
+    .filter__container {
+      display: flex;
+      flex-direction: column;
+    }
+    .checkbox {
+      width: 75%;
+    }
+    .list-item {
+      height: 6rem;
+    }
+    .button--text {
+      margin-top: 5rem;
+    }
+    .button {
+      margin-bottom: 5rem;
+    }
+  }
+}
